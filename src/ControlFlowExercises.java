@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        count 5 - 15
@@ -52,6 +54,41 @@ public class ControlFlowExercises {
                 System.out.println(a);
             }
         }
+//        Display a table of powers
+        System.out.println("Please enter an integer");
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
+        int userInput = sc.nextInt();
+        System.out.println("Do you want to continue?");
+        String answer = sc.next();
+        System.out.println("Here is your table!");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        if(answer.equalsIgnoreCase("yes")){
+            for(int b = 1; b <= userInput; b++){
+                int squared = b*b;
+                int cubed = b*b*b;
+                System.out.printf("%-7d|%-9d|%-6d%n",b,squared,cubed);
+            }
+        }
+//        convert number grades into letter grades
+        System.out.println("Please enter the student's grade:");
+        int grade = sc.nextInt();
+        System.out.println("Do you want to continue?");
+        String userAnswer = sc.next();
+        if(userAnswer.equalsIgnoreCase("yes")){
+            if(grade >= 88){
+                System.out.println("You got an A! Excellent job.");
+            }else if(grade >= 80 && grade <= 87){
+                System.out.println("You got a B! Great job");
+            }else if(grade >= 67 && grade <= 79){
+                System.out.println("You got a C. You passed");
+            }else if(grade >= 60 && grade <= 66){
+                System.out.println("You got a D. Please review.");
+            }else {
+                System.out.println("You got an F. See your instructor.");
+            }
+        }
+
 
     }
 }
