@@ -16,6 +16,17 @@ public class LectureMethods {
         prettyPrint(getTotal(2,6), "DE");
         prettyPrint(getTotal(2,5));
 
+        count(5);
+
+    }
+
+    public static void count(int n){
+        if(n <= 0) {
+            System.out.println("All done");
+            return;
+        }
+        System.out.println(n);
+        count(n -1);
     }
 
     public static double getTotal(int a, int b){
