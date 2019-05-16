@@ -15,7 +15,15 @@ public class MethodsExercises {
 //
 //        System.out.println("getInteger(1,10) = " + getInteger(1,10));
 
-        factorial();
+//        factorial();
+
+        String answer = "Y";
+
+        while(answer.equals("Y")){
+            dice();
+            System.out.println("Do you want to continue? Y/N");
+            answer = scan.nextLine().toUpperCase();
+        }
 
     }
 
@@ -61,6 +69,17 @@ public class MethodsExercises {
         }
 
         System.out.println(output);
+
+    }
+
+    public static void dice(){
+        int sides = getInteger(1, 100);
+
+        int rnd = (int) (Math.random() * sides ) + 1;
+        int rnd2 = (int) (Math.random() * sides ) + 1;
+
+        System.out.println("rnd = " + rnd);
+        System.out.println("rnd2 = " + rnd2);
 
     }
 
