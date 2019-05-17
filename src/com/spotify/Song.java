@@ -18,16 +18,6 @@ public class Song {
         this.genre = genre;
     }
 
-    // Reads a song info
-//    public Song(long id, String title, String artist, String genre, int releaseYear, boolean explicit) {
-//        this.id = id;
-//        this.title = title;
-//        this.artist = artist;
-//        this.genre = genre;
-//        this.releaseYear = releaseYear;
-//        this.explicit = explicit;
-//    }
-
     // Defines the rules of how the info is being returned
     public int getReleaseYear() {
         return releaseYear;
@@ -52,7 +42,7 @@ public class Song {
     }
 
     public String getTitle() {
-        return title;
+        return title.trim();
     }
 
     public String getArtist() {
@@ -66,4 +56,10 @@ public class Song {
     public boolean isExplicit() {
         return explicit;
     }
+
+    public String toString(){
+        // simulate the json object console.log();
+        return String.format("{ 'title': \'%s\',\n'artist': \'%s\'}", this.getTitle(), this.getArtist());
+    }
+
 }
