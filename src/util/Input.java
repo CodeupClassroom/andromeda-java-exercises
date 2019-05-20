@@ -17,14 +17,16 @@ public class Input {
     }
 
     public boolean yesNo(){
-        return getString("Type yes/no: ").equals("yes");
+        String input = getString("Type yes/no: ");
+        return input.equals("yes") || input.equals("y");
     }
 
-    public int getInt(int max, int min){
+    public int getInt(int min, int max){
         int num = getInt();
 
         if(num < min || num > max){
-            return getInt();
+            System.out.println("Error outside of the boundaries");
+            return getInt(min, max);
         }
 
         return num;
@@ -33,5 +35,21 @@ public class Input {
     public int getInt(){
         return Integer.parseInt(getString("Give me a number: "));
     }
+
+    public double getDouble(){
+        return Double.parseDouble(getString("Give me a decimal"));
+    }
+
+    public double getDouble(double min, double max){
+        double num = getDouble();
+
+        if(num < min || num > max){
+            System.out.println("Error outside of the boundaries");
+            return getDouble(min, max);
+        }
+
+        return num;
+    }
+
 
 }
