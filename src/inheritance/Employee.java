@@ -14,6 +14,8 @@ public class Employee extends Person {
     }
 
     public double getSalary() {
+        char x = '2';
+        int y = 2;
         return salary;
     }
 
