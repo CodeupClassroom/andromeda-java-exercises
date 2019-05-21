@@ -1,8 +1,9 @@
 package inheritance;
 
 public class Person {
-    public String name;
+    private String name;
     private boolean insured;
+    protected String dob;
 
     public Person(String name){
         this.name = name;
@@ -18,5 +19,9 @@ public class Person {
 
     public void setInsured(boolean insured) {
         this.insured = insured;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

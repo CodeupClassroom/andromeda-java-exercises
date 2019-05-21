@@ -8,7 +8,7 @@ public class Instructor extends Employee {
 
     @Override
     public void doWork(){
-        System.out.println(super.name+ " is ");
+        System.out.println(super.getName()+ " is ");
         super.doWork();
         System.out.println(" and Live coding...");
     }
