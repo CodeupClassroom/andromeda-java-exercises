@@ -4,6 +4,7 @@ public class Rectangle {
 
     protected double width;
     protected double length;
+    int numberOfSides = 4;
 
     public Rectangle(double width, double length) {
         this.length = length;

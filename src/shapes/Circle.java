@@ -2,7 +2,7 @@ package shapes;
 
 public class Circle {
 
-    private double radius;
+    private Double radius;
 
     public Circle(double radius){
         this.radius = radius;
