@@ -3,9 +3,9 @@ package shapes;
 
 public abstract class Shape {
 
-    public abstract double getPerimeter();
-
-    public abstract double getArea();
+//    public  double getPerimeter() {return 0;}
+//
+//    public abstract double getArea();
 
 //    public abstract int getNumberOfSides();
 
