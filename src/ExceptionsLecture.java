@@ -10,12 +10,14 @@ public class ExceptionsLecture {
 
     public static void main(String[] args) {
 
-        // code that breaks because the programmer messed up (Runtime or "Unchecked" Exceptions)
+// ======= Throwing Runtime or "Unchecked" Exceptions - code that breaks because the programmer messed up
+
 
 //            String[] strings = new String[3];
 //            System.out.println(strings[9]);
 
 //            String[] strings = new String[-1];
+
 
 //            Object x = new Integer(0);
 //            System.out.println((String)x);
@@ -27,23 +29,30 @@ public class ExceptionsLecture {
         // we can also throw different kinds of exceptions directly
 
 //            throw new RuntimeException("AAAAAHHHHHH");
+
 //            throw new ArrayIndexOutOfBoundsException("Oh NOOOO");
 
-        // we can catch exceptions if they are thrown
+
+// ======= Catching/Handling Exceptions
 
 
 //            try {
-//                throw new ArrayIndexOutOfBoundsException();
+//                throw new RuntimeException("Something in here");
 //            } catch(ArrayIndexOutOfBoundsException e) {
 //                System.err.println(e);
 //            }
+//
+//            System.out.println("It will still run");
+//            System.out.println("It will still run");
+//            System.out.println("It will still run");
+//            System.out.println("It will still run");
 //
 //            try {
 //                throw new ArrayIndexOutOfBoundsException();
 //            } catch(RuntimeException e) {
 //                System.err.println(e);
 //            }
-
+//
 //            try {
 //                if (Math.random() < .5) {
 //                    throw new ArrayIndexOutOfBoundsException("Whoops!");
@@ -72,8 +81,38 @@ public class ExceptionsLecture {
 //
 //            System.out.println(strings);
 
+// ======= Checked Exceptions
+
+//        try {
+//            throw new Exception("Something went wrong!!");
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("This always runs");
+//
+
+// ======= Custom Exceptions
 
 
+//        try {
+//            makesException();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
+
+
+        try {
+            throw new IndentationException();
+        } catch (IndentationException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void makesException() throws Exception {
+        throw new Exception();
     }
 
 }
