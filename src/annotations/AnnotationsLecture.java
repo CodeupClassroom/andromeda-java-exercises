@@ -22,11 +22,12 @@ public class AnnotationsLecture {
 
     private List<Integer> stats;
 
-
+    @SuppressWarnings("unchecked")
     public AnnotationsLecture(String name) {
         this.stats = new ArrayList();
     }
 
+    @SuppressWarnings("deprecation")
     public static void main(String[] args) {
         Parent p = new Parent();
         p.newWay();
